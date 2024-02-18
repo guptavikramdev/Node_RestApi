@@ -1,7 +1,7 @@
 import { DEBUG_MODE } from '../config'
 import {ValidationError} from 'joi'
 import CustomErrorHandler from '../services/CustomErrorHandler' 
-export const errorHandler=(err,req,res,next) => {
+ const errorHandler=(err,req,res,next) => {
     let statusCode=500;
     let data={
         massage:"Internal Server Error",
@@ -25,3 +25,4 @@ export const errorHandler=(err,req,res,next) => {
     return res.status(statusCode).json(data)
 
 }
+export default errorHandler

@@ -4,7 +4,7 @@ class JwtService{
         return jwt.sign(payload,secret,{expiresIn:expiry})
     }
     static verify(token,secret){
-        jwt.verify(token,secret)
+       return jwt.verify(token,secret)
     }
 }
 export default JwtService;

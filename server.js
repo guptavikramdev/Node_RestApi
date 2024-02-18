@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from 'mongoose'
 import  {APP_PORT,DB_URL} from "./config"
 import routes from "./routes";
-import { errorHandler } from "./middleware/errorHandler";
+import { errorHandler } from "./middleware";
 const app   = express();
 
 mongoose.connect(DB_URL,{useNewUrlParser:true,useUnifiedTopology:true});
